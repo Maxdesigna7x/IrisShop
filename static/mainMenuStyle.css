@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 3;
+  font-size: 2rem;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: normal;  
+  font-size: 5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  grid-template-rows: repeat(3, 0fr);
+  gap: 10px; /* Espaciado entre elementos */
+
+  
+  justify-content:center;
+  align-items: center;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 350px; /* Ancho fijo */
+  height: 515px; /* Altura fija */
+
+  background-color: #ffffff;;
+  border: none;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  
+}
+.grid-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; 
+  display: block;
+}
+
+.item-container {
+  width: 125px;
+  height: 125px;
+  
+  background-color: #ffffff;;
+  border: none;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 25px 30px rgba(0, 0, 0, 0.08);
+  
+  position: relative;
+  margin: 15px;
+  flex-basis:auto;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus, &.active {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.item-label {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  font-weight: bolder;
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  scale: 1;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.icon-button {
+  margin: 5px;
+  flex-basis: calc(33% - 20px);
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .icon-button {
+      flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-button {
+      flex-basis: 100%;
+  }
+}
+
+.icon-button:hover, .icon-button:focus {
+  outline: none;
+}
+
+.icon-button:hover + .item-label, .icon-button:focus + .item-label {
+  color: var(--primary-darker);
+}
+

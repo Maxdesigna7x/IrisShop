@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e9f1f6;
+  margin: 0;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.container {
+  width: 350px;
+  height: 800px;
+  display: grid;
+  grid-template-rows: auto 500px auto;
+  gap: 10px;
+  
+  padding: 10px;
+  overflow: hidden;
+
+  background-color: #ffffff;;
+  border: none;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.box {
+  
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  height: 78%;
+}
+
+#products-box {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 500px;
+}
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items:center; 
+  height: 50px;
+}
+#add-product-btn {  
+  margin-top: 10px;  
+}
+#sell-btn {  
+  margin-left: 15px;
+}
+#cancel-btn {  
+  margin-right: 15px;
+}
+#price {  
+  height: 40px;  
+}
+#priceLabel {  
+  font-size: 35px;
+}
+#cancel-btn {  
+  size: 150%;
+}
+input {
+  width: 100%;  
+  padding: 5px;
+  border-radius: 20px;
+}
+#client-name {  
+  margin-bottom: 10px;
+}
+
+
+button {
+  width: 35%;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+#products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 55px;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}

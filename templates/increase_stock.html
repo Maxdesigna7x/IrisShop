@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/increase_stock_app_styles.css">
+    <link rel=”icon” type=”image/x-icon” href=”static\usage_images\shein-android.ico”>
+    <title>Agregar Producto</title>
+</head>
+<body>
+  <div class="container">
+    <form id="image-form">
+        <h1>Agregar Stock</h1>
+        <label for="item_nombre">ID del producto:</label>
+        <input type="text" id="item_id" name="item_id" required>
+
+        <div class="container_button_submit"> 
+            <button id="boton_buscar">Buscar Producto</button>
+        </div>
+        <div class="container_producto_encontrado">
+        <span id="product_description"></span>            
+            <div class="info_product">
+                <span id="pre-nombre"></span><span id="producto-nombre"></span>
+                <br>
+                <span id="pre-categoria"></span><span id="producto-categoria"></span>
+                <br>
+                <span id="pre-stock-actual"></span> <span id="producto-stock-actual"></span> 
+                <br> 
+                <div class="imagen-container">
+                    <img src="/static/usage_images/preview1.jpg" alt="product image" id="product-image" class="image">
+                </div>                        
+            </div>
+            
+            <br>
+            <div id="input_stock_div">
+                <label for="product_description" id="product_description_id">Agregar cantidad al producto:</label>
+                <input type="text" id="add_stock_input" class="input_stock">
+            </div>           
+
+        </div>
+
+        <div class="container_button_submit"> 
+          <button id="button_atras">Cancelar</button>
+          <button type="submit" id="button_submit">Agregar</button>          
+        </div>
+    </form>
+  </div>
+  <script src="/static/increase_stock_app.js"></script>
+</body>
+</html>

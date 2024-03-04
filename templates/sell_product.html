@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/sell_product_styles.css">
+    <link rel=”icon” type=”image/x-icon” href=”static\usage_images\shein-android.ico”>
+    <title>Agregar Producto</title>
+</head>
+<body>
+    <div id="ventas" class="container">
+      <div id="client-details" class="box">
+        <h2>Detalles del cliente</h2>
+        <input type="text" id="client-name" placeholder="Nombre">
+        <input type="text" id="client-phone" placeholder="Teléfono">
+      </div>
+      <div id="products-box" class="box">
+        <h2>Productos</h2>        
+        <div id="products-list" class="scrollable"></div>
+        <button id="add-product-btn">+</button>
+      </div>
+      <div id="price" class="box">
+        <label for="priceAmount" id="priceLabel">Total:</label>
+      </div>
+      <div id="action-buttons" class="box">
+        <button id="cancel-btn">Cancelar</button>
+        <button id="sell-btn">Vender</button>        
+      </div>
+    </div>
+    <script src="/static/sell_product_app.js"></script>
+  </div>
+</body>
+</html>

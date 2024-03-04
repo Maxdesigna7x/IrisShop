@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/create_product_styles.css">
+    <link rel=”icon” type=”image/x-icon” href=”static\usage_images\shein-android.ico”>
+    <title>Agregar Producto</title>
+</head>
+<body>
+  <div class="container">
+    <form id="image-form">
+        <h1>Agregar Producto</h1>
+        <label for="item_nombre">Nombre del producto:</label>
+        <input type="text" id="item_nombre" name="item_nombre" required>
+        
+        <label for="item_descripcion">Descripción del producto:</label>
+        <input type="text" id="item_descripcion" name="item_descripcion">
+        
+        <label for="category_id">ID de categoría:</label>
+        <div class="category_group">              
+            <select id="category-dropdown"></select>        
+            <button id="show_categorys">+</button>   
+        </div>
+        <input type="text" id="new-category-input" class="adds-text-category">  
+
+        <div class="botones_add_Category">            
+          <button id="cancel-category-button" class="adds-category">Cancelar</button>            
+          <button id="add-category-button" class="adds-category">Agregar Categoria</button> 
+        </div> 
+
+        <label for="item_costo">Costo del producto:</label>
+        <input type="number" id="item_costo" name="item_costo" step="0.01" required>
+
+        <label for="item_precio">Precio del producto:</label>
+        <input type="number" id="item_precio" name="item_precio" step="0.01" required>
+
+        <label for="item_stock">Stock del producto:</label>
+        <input type="number" id="item_stock" name="item_stock" required step="1">
+        
+        <div class="image-loader">
+          <label for="image" class="custom-file-upload">
+            Seleccionar Imagen
+        </label>
+          <input type="file" id="image" name="image" onchange="previewImage(event)"hidden />
+          <br><br>
+        </div>
+        <div class="image-container">
+            <img src="/static/usage_images/preview1.jpg" alt="Preview image" id="preview-image" class="preview-image">
+        </div>
+        <div class="container_button_submit"> 
+          <button id="button_atras">Cancelar</button>
+          <button type="submit" id="button_submit">Añadir</button>          
+        </div>
+    </form>
+    <canvas id="image-canvas" style="display:none;"></canvas>
+    <script src="/static/create_product_app.js"></script>
+  </div>
+</body>
+</html>
